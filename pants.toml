@@ -1,0 +1,18 @@
+[GLOBAL]
+pants_version = "2.21.0"
+backend_packages = [
+    "pants.backend.python",
+]
+
+[source]
+root_patterns = ["/", "/3rdparty/python"]
+
+[python]
+interpreter_constraints = ["==3.12.*"]
+enable_resolves = true
+
+[python.resolves]
+python-default = "3rdparty/python/default.lock"
+
+[python-infer]
+unowned_dependency_behavior = "error"
