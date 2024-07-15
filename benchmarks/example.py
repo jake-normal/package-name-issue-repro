@@ -1,1 +1,1 @@
-import ragas # type: ignore
+import ragas
